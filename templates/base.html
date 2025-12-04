@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Necoclik Store</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Iconos (WhatsApp, Instagram, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="header-container">
+
+        <!-- Logo -->
+        <h1 class="logo">🛒 Necoclik Store</h1>
+
+        <!-- Navegación -->
+        <nav class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/carrito">Carrito</a>
+        </nav>
+
+        <!-- Barra de búsqueda -->
+        <form class="search-bar" action="/buscar" method="GET">
+            <input type="text" name="q" placeholder="Buscar producto..." required>
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+
+    </div>
+</header>
+
+<!-- ================= CONTENIDO ================= -->
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+    <div class="footer-content">
+
+        <!-- Redes sociales -->
+        <div class="social-links">
+            <a href="https://wa.me/573001112233" class="whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+
+        <p>© 2025 Necoclik Store – Todos los derechos reservados.</p>
+
+        <div class="footer-links">
+            <a href="/politica-datos">Política de Datos</a>
+            <a href="/terminos">Términos y Condiciones</a>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/573001112233" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

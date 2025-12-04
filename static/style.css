@@ -1,0 +1,265 @@
+/* ======== ESTILO GLOBAL ======== */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #0a0f2d, #1b0033, #001a3a);
+    background-size: 400% 400%;
+    animation: gradientMove 18s ease infinite;
+    margin: 0;
+    padding: 0;
+    color: #e6e6e6;
+}
+
+/* Animación del fondo */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ======== HEADER ======== */
+header {
+    background: rgba(10, 20, 60, 0.85);
+    backdrop-filter: blur(6px);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #cbe0ff;
+    margin-left: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #7ab3ff;
+    text-shadow: 0 0 8px #4aa3ff;
+}
+
+/* ======== CONTENEDOR GENERAL ======== */
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+/* ======== FOOTER ======== */
+footer {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+}
+
+/* ======== GRID DE PRODUCTOS ======== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Animación suave al mostrar */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== CARD DE PRODUCTO ======== */
+.card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-align: center;
+    padding-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: rgba(255,255,255,0.05);
+}
+
+/* ======== TITULO Y PRECIO ======== */
+.card h3 {
+    font-size: 20px;
+    color: #e8e8ff;
+    margin: 15px 0 5px;
+}
+
+.card p {
+    font-size: 18px;
+    color: #7ab3ff;
+}
+
+/* ======== BOTONES ======== */
+a.button {
+    display: inline-block;
+    background: #1e54ff;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+    transition: 0.2s ease;
+    font-weight: 500;
+    box-shadow: 0 3px 12px rgba(30, 84, 255, 0.5);
+}
+
+a.button:hover {
+    background: #153ecc;
+    box-shadow: 0 5px 18px rgba(21, 62, 204, 0.6);
+}
+
+/* ======== DETALLE DE PRODUCTO ======== */
+.product-detail {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+    animation: fadeIn 0.7s ease;
+}
+
+.product-detail img {
+    width: 340px;
+    height: 340px;
+    border-radius: 14px;
+    object-fit: contain;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7ab3ff;
+}
+
+/* ======== ENLACES DE DETALLE ======== */
+.detail-link {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: #1e54ff;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.detail-link:hover {
+    background: #163fcc;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 18px rgba(30, 84, 255, 0.5);
+}
+
+/* ======== CATEGORÍAS ======== */
+.categories-bar {
+    background: rgba(255,255,255,0.05);
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.categories-bar a {
+    background: rgba(255,255,255,0.08);
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #d3d9ff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.categories-bar a:hover {
+    background: #1e54ff;
+    color: white;
+    box-shadow: 0 4px 15px rgba(30,84,255,0.6);
+}
+
+/* ================== REDES SOCIALES ================== */
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #7ab3ff;
+    text-shadow: 0 0 8px #4aa3ff;
+}
+
+/* ================== LINKS DEL FOOTER ================== */
+.footer-links a {
+    display: inline-block;
+    color: #cbe0ff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #7ab3ff;
+    text-shadow: 0 0 8px #4aa3ff;
+}
+
+/* ================== BOTÓN FLOTANTE WHATSAPP ================== */
+.whatsapp-float {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 55px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: #1ebe5a;
+}

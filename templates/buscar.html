@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔍 Resultados de búsqueda</h2>
+
+<div class="product-list">
+
+    {% if results %}
+        {% for p in results %}
+        <div class="product-card">
+
+            <img src="{{ p.image }}" alt="{{ p.name }}">
+
+            <h3>{{ p.name }}</h3>
+            <p class="price">${{ p.price }}</p>
+
+            <a href="/producto/{{ p.id }}" class="button">Ver producto</a>
+        </div>
+        {% endfor %}
+
+    {% else %}
+        <p class="empty">No se encontraron productos con: <strong>"{{ query }}"</strong></p>
+    {% endif %}
+
+</div>
+
+{% endblock %}
